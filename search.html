@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Available Buses</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+body{
+background:#f5f6fa;
+}
+
+.bus-header{
+padding:120px 8% 40px;
+}
+
+.bus-header h1{
+margin-bottom:10px;
+}
+
+.bus-container{
+
+display:grid;
+gap:25px;
+
+padding:0 8% 80px;
+
+}
+
+.bus-card{
+
+background:white;
+
+border-radius:20px;
+
+padding:25px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+transition:.3s;
+
+}
+
+.bus-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.bus-left h2{
+
+color:#d84e55;
+
+margin-bottom:10px;
+
+}
+
+.bus-left p{
+
+margin:6px 0;
+
+color:#555;
+
+}
+
+.price{
+
+text-align:right;
+
+}
+
+.price h2{
+
+margin-bottom:10px;
+
+color:#d84e55;
+
+}
+
+.price button{
+
+padding:12px 28px;
+
+border:none;
+
+background:#d84e55;
+
+color:white;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+.price button:hover{
+
+background:#b73840;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-bus"></i>
+
+BusGo
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="bus-header">
+
+<h1>Available Buses</h1>
+
+<p id="route"></p>
+
+</section>
+
+<section class="bus-container">
+
+<div class="bus-card">
+
+<div class="bus-left">
+
+<h2>Royal Travels</h2>
+
+<p>⭐⭐⭐⭐⭐</p>
+
+<p>09:00 PM → 05:30 AM</p>
+
+<p>AC Sleeper</p>
+
+</div>
+
+<div class="price">
+
+<h2>₹799</h2>
+
+<button onclick="bookBus('Royal Travels',799)">
+View Seats
+</button>
+
+</div>
+
+</div>
+
+<div class="bus-card">
+
+<div class="bus-left">
+
+<h2>Green Line</h2>
+
+<p>⭐⭐⭐⭐</p>
+
+<p>10:30 PM → 06:00 AM</p>
+
+<p>Non AC Sleeper</p>
+
+</div>
+
+<div class="price">
+
+<h2>₹599</h2>
+
+<button onclick="bookBus('Green Line',599)">
+View Seats
+</button>
+
+</div>
+
+</div>
+
+<div class="bus-card">
+
+<div class="bus-left">
+
+<h2>KPN Travels</h2>
+
+<p>⭐⭐⭐⭐⭐</p>
+
+<p>08:45 PM → 04:45 AM</p>
+
+<p>AC Seater</p>
+
+</div>
+
+<div class="price">
+
+<h2>₹699</h2>
+
+<button onclick="bookBus('KPN Travels',699)">
+View Seats
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="js/search.js"></script>
+
+</body>
+
+</html>

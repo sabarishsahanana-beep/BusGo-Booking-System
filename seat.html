@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Select Seat | BusGo</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+background:#f4f4f4;
+font-family:Poppins,sans-serif;
+}
+
+.container{
+width:90%;
+max-width:1000px;
+margin:120px auto;
+}
+
+h1{
+text-align:center;
+margin-bottom:30px;
+color:#d84e55;
+}
+
+.screen{
+background:#d84e55;
+color:white;
+padding:12px;
+border-radius:8px;
+text-align:center;
+margin-bottom:30px;
+}
+
+.seat-layout{
+display:grid;
+grid-template-columns:repeat(4,70px);
+gap:15px;
+justify-content:center;
+}
+
+.seat{
+width:60px;
+height:60px;
+background:#4CAF50;
+border-radius:10px;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.seat:hover{
+transform:scale(1.08);
+}
+
+.booked{
+background:#d84e55;
+cursor:not-allowed;
+}
+
+.selected{
+background:#2196F3;
+}
+
+.legend{
+display:flex;
+justify-content:center;
+gap:30px;
+margin:35px 0;
+}
+
+.box{
+width:20px;
+height:20px;
+display:inline-block;
+margin-right:8px;
+border-radius:4px;
+}
+
+.green{
+background:#4CAF50;
+}
+
+.red{
+background:#d84e55;
+}
+
+.blue{
+background:#2196F3;
+}
+
+.summary{
+text-align:center;
+margin-top:35px;
+}
+
+.summary h2{
+margin-bottom:15px;
+}
+
+button{
+padding:15px 35px;
+border:none;
+background:#d84e55;
+color:white;
+font-size:17px;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#b73840;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Select Your Seat</h1>
+
+<div class="screen">
+🚌 Driver
+</div>
+
+<div class="seat-layout" id="seatLayout">
+
+</div>
+
+<div class="legend">
+
+<div><span class="box green"></span>Available</div>
+
+<div><span class="box red"></span>Booked</div>
+
+<div><span class="box blue"></span>Selected</div>
+
+</div>
+
+<div class="summary">
+
+<h2 id="seatNumber">
+No Seat Selected
+</h2>
+
+<button onclick="continueBooking()">
+Continue Booking
+</button>
+
+</div>
+
+</div>
+
+<script src="js/seat.js"></script>
+
+</body>
+</html>
